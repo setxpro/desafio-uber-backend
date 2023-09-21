@@ -21,7 +21,8 @@ public class EmailSenderController {
     @PostMapping()
     public ResponseEntity<String> sendEmail(@RequestBody EmailRequest request) {
         try {
-            this.emailSenderService.sendEmail(request.to(), request.subject(), request.body());
+            this.emailSenderService.sendMessage(request.to(), request.subject(), request.body());
+           // this.emailSenderService.sendEmail(request.to(), request.subject(), request.body());
             return ResponseEntity.ok("Email send successfully");
         } catch (EmailServiceException ex) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error while sending email.");

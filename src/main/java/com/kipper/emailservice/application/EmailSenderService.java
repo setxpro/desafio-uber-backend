@@ -21,8 +21,8 @@ public class EmailSenderService implements EmailSenderUseCase {
         this.emailSenderGateway.sendEmail(to, subject, body);
     }
 
-    @Override
-    public void sendEmail(String to, String subject, String body) {
-        this.emailSenderGateway.sendEmail(to, subject, body);
-    }
+  //  @Override
+   // public void sendEmail(String to, String subject, String body) {
+    //     this.emailSenderGateway.sendEmail(to, subject, body);
+   // }
 }
